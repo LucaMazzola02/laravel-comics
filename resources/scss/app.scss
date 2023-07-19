@@ -1,1 +1,162 @@
-@import "~bootstrap/scss/bootstrap";
+@use './partials/variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.flex{
+    display: flex;
+}
+
+.container{
+    width: 1100px;
+    margin: 0 auto;
+}
+.jumbotron-top{
+    height: 350px;
+    background-image: url(../assets/img/jumbotron.jpg);
+    background-size: cover;
+    
+}
+.jumbotron-bottom{
+    padding: 2rem 0;
+    background-color: $bgColor;
+}
+.series-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.card{
+    width: calc((100% / 6) - 30px);
+    color: $colorText;
+    
+    
+}
+.card-image{
+    height: 200px;
+
+}
+.card-image img{
+    width: 100%;
+    height: 100%;
+}
+.main-bottom{
+    display: flex;
+    height: 400px;
+    background-image: url(../assets/img/footer-bg.jpg);
+
+    section{
+        padding-top: 2rem;
+        margin-right: 2.7rem;
+    }
+
+    section h2{
+        color: $colorText;
+        margin: 1rem 0 .6rem ;
+    }
+
+    section ul li{
+        color: #9c9c9c;
+        font-size: .8rem;
+        margin-bottom: 0.4rem;
+        transition: all .3s cubic-bezier(.215, .61, .355, 1);
+    }
+    section ul li:hover{
+        color: $colorText;
+    }
+
+}
+.sections{display: flex;}
+
+.main-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 12%;
+}
+.main-logo img{
+    width: 400px;
+
+}
+
+header{
+        
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+
+    .header-logo img{
+        color: $primaryColor;
+        height: 80px;  
+    }
+
+    .navbar ul{
+        display: flex;
+        
+        
+        li a{
+            padding: .8rem;
+            font-size: .8rem;
+            font-weight: 600;
+            transition: color .5s ease;
+
+            &:hover{
+                color: $primaryColor;
+                
+            }
+        }
+    }     
+}
+footer{
+    background-color: $bgColor;
+    
+    & .container{
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+}
+
+.footer-left button{
+    border: 2.5px solid $primaryColor;
+    padding: 7px 12px;
+    background-color: $bgColor;
+    color: $colorText;
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+
+    &:hover{background-color: $primaryColor;}
+}
+
+.footer-right{
+    display: flex;
+    align-items: center;
+
+    h2{
+        color: $primaryColor;
+        margin-right: 1rem;
+    }
+
+    .icons img{
+        margin-left: 0.8rem;
+    }
+}
