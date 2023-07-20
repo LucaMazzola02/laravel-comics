@@ -15,9 +15,10 @@
     @include('partials.header')
 
     <main>
-        @yield('main-content')
+        @yield('jumbo-content')
     </main>
 
+    @include('partials.main')
     @include('partials.footer')
     @yield('custom-scripts-tail')
     

@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $pastas = config('db.pasta');
+    $cards = config('db.cards');
     $headerLinks = config('db.headerLinks');
 
-    return view('home', compact('pastas', 'headerLinks'));
+    return view('home', compact('cards', 'headerLinks'));
 })->name('homepage');

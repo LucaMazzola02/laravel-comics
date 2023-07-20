@@ -2,8 +2,23 @@
 
 @section('title', 'Welcome')
 
-@section('main-content')
-    <h1 class="text-center m-5">
-        Benvenuto/a !!!!!
-    </h1>
+@section('jumbo-content')
+<div class="jumbotron-top"></div>
+
+<div class="jumbotron-bottom">
+    <div class="container">
+        <div class="series-cards">
+            @foreach ( $cards as $card)
+            <div class="card">
+                <div class="card-image">
+                    <img src= "{{ $card['thumb'] }}" alt="series-image"> 
+                </div>
+                <div class="title">
+                    {{ $card['series'] }}
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</div>
 @endsection
